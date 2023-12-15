@@ -15,7 +15,13 @@ npm install -g expo-cli
 To create a new project using this template, please clone this repository. Then run:
 
 ```bash
-yarn install
+yarn
+```
+
+Then start by
+
+```
+yarn start
 ```
 
 ## File Structure
