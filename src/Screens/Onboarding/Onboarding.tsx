@@ -29,7 +29,7 @@ export const Onboarding = (props: {
             title: "Truy cập mọi nơi",
             subTitleStyles: styles.subTitle,
             subtitle:
-              "Bạn có thể giám sát và quản lý các thiệt bị trong nhà nhanh chóng dủ ở bất cứ đâu",
+              "Bạn có thể giám sát và quản lý các thiệt bị trong nhà nhanh chóng dù ở bất cứ đâu",
           },
           {
             backgroundColor: "#fff",

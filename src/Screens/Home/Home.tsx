@@ -1,9 +1,9 @@
-import { i18n, LocalizationKey } from "@/Localization";
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { HStack, Spinner, Heading } from "native-base";
 import { User } from "@/Services";
+import { Button, Text } from "react-native-paper";
 
 export interface IHomeProps {
   data: User | undefined;
@@ -18,16 +18,14 @@ export const Home = (props: IHomeProps) => {
       {isLoading ? (
         <HStack space={2} justifyContent="center">
           <Spinner accessibilityLabel="Loading posts" />
-          <Heading color="primary.500" fontSize="md">
-            {i18n.t(LocalizationKey.LOADING)}
-          </Heading>
         </HStack>
       ) : (
         <>
-          <Text>{i18n.t(LocalizationKey.HOME)}</Text>
           <Heading color="primary.500" fontSize="md">
             {data?.username}
           </Heading>
+          <Text variant="displayLarge">Display Large</Text>
+          <Button  mode="contained">abc</Button>
         </>
       )}
     </View>
