@@ -5,10 +5,10 @@ import { StatusBar } from "expo-status-bar";
 import OnboardingPlugin from "react-native-onboarding-swiper";
 import { RootScreens } from "..";
 import { SafeAreaView } from "react-native-safe-area-context";
-import Onboarding1 from "@/static/image/Onboarding1";
-import Onboarding2 from "@/static/image/Onboarding2";
-import Onboarding3 from "@/static/image/Onboarding3";
-import DotIcon from "@/static/icon/DotIcon";
+import Onboarding1 from "../../static/image/Onboarding1";
+import Onboarding2 from "../../static/image/Onboarding2";
+import Onboarding3 from "../../static/image/Onboarding3";
+import DotIcon from "../../static/icon/DotIcon";
 import { Dimensions } from "react-native";
 import { Button } from "react-native-paper";
 
