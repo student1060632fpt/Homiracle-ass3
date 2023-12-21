@@ -229,7 +229,7 @@
     "display": {
       "large": {
         "fontFamily": "Roboto",
-        "fontStyle": "Regular",
+        "fontStyle": "normal",
         "fontWeight": "normal",
         "fontSize": 57,
         "lineHeight": 64,
@@ -237,7 +237,7 @@
       },
       "medium": {
         "fontFamily": "Roboto",
-        "fontStyle": "Regular",
+        "fontStyle": "normal",
         "fontWeight": "normal",
         "fontSize": 45,
         "lineHeight": 52,
@@ -245,7 +245,7 @@
       },
       "small": {
         "fontFamily": "Roboto",
-        "fontStyle": "Regular",
+        "fontStyle": "normal",
         "fontWeight": "normal",
         "fontSize": 36,
         "lineHeight": 44,
@@ -255,7 +255,7 @@
     "headline": {
       "large": {
         "fontFamily": "Roboto",
-        "fontStyle": "Regular",
+        "fontStyle": "normal",
         "fontWeight": "normal",
         "fontSize": 32,
         "lineHeight": 40,
@@ -263,7 +263,7 @@
       },
       "medium": {
         "fontFamily": "Roboto",
-        "fontStyle": "Regular",
+        "fontStyle": "normal",
         "fontWeight": "normal",
         "fontSize": 28,
         "lineHeight": 36,
@@ -271,7 +271,7 @@
       },
       "small": {
         "fontFamily": "Roboto",
-        "fontStyle": "Regular",
+        "fontStyle": "normal",
         "fontWeight": "normal",
         "fontSize": 24,
         "lineHeight": 32,
@@ -281,7 +281,7 @@
     "body": {
       "large": {
         "fontFamily": "Roboto",
-        "fontStyle": "Regular",
+        "fontStyle": "normal",
         "fontWeight": "normal",
         "fontSize": 16,
         "lineHeight": 24,
@@ -289,7 +289,7 @@
       },
       "medium": {
         "fontFamily": "Roboto",
-        "fontStyle": "Regular",
+        "fontStyle": "normal",
         "fontWeight": "normal",
         "fontSize": 14,
         "lineHeight": 20,
@@ -297,7 +297,7 @@
       },
       "small": {
         "fontFamily": "Roboto",
-        "fontStyle": "Regular",
+        "fontStyle": "normal",
         "fontWeight": "normal",
         "fontSize": 12,
         "lineHeight": 16,
@@ -307,7 +307,7 @@
     "label": {
       "large": {
         "fontFamily": "Roboto",
-        "fontStyle": "Medium",
+        "fontStyle": "normal",
         "fontWeight": "bold",
         "fontSize": 14,
         "lineHeight": 20,
@@ -315,7 +315,7 @@
       },
       "medium": {
         "fontFamily": "Roboto",
-        "fontStyle": "Medium",
+        "fontStyle": "normal",
         "fontWeight": "bold",
         "fontSize": 12,
         "lineHeight": 16,
@@ -323,7 +323,7 @@
       },
       "small": {
         "fontFamily": "Roboto",
-        "fontStyle": "Medium",
+        "fontStyle": "normal",
         "fontWeight": "bold",
         "fontSize": 11,
         "lineHeight": 16,
@@ -333,7 +333,7 @@
     "title": {
       "large": {
         "fontFamily": "Roboto",
-        "fontStyle": "Regular",
+        "fontStyle": "normal",
         "fontWeight": "normal",
         "fontSize": 22,
         "lineHeight": 28,
@@ -341,7 +341,7 @@
       },
       "medium": {
         "fontFamily": "Roboto",
-        "fontStyle": "Medium",
+        "fontStyle": "normal",
         "fontWeight": "bold",
         "fontSize": 16,
         "lineHeight": 24,
@@ -349,7 +349,7 @@
       },
       "small": {
         "fontFamily": "Roboto",
-        "fontStyle": "Medium",
+        "fontStyle": "normal",
         "fontWeight": "bold",
         "fontSize": 14,
         "lineHeight": 20,
