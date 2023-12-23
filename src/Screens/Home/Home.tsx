@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { HStack, Spinner, Heading } from "native-base";
-import { User } from "@/Services";
+import { User } from "../../Services";
 import { Button, Text } from "react-native-paper";
 
 export interface IHomeProps {

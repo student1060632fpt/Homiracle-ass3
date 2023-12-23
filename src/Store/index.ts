@@ -1,4 +1,4 @@
-import { API } from "@/Services/base";
+import { API } from "../Services/base";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";

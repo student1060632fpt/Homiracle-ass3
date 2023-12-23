@@ -1,8 +1,8 @@
 import React from "react";
 import * as Localization from "expo-localization";
-import { i18n, Language } from "@/Localization";
+import { i18n, Language } from "./Localization";
 import { NativeBaseProvider } from "native-base";
-import { store, persistor } from "@/Store";
+import { store, persistor } from "./Store";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { ApplicationNavigator } from "./Navigation";

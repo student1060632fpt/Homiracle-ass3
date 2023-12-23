@@ -1,6 +1,6 @@
 import { Home } from "./Home";
 import React, { useState, useEffect } from "react";
-import { useLazyGetUserQuery } from "@/Services";
+import { useLazyGetUserQuery } from "../../Services";
 
 export const HomeContainer = () => {
   const [userId, setUserId] = useState("9");
