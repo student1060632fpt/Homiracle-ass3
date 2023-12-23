@@ -1,3 +1,4 @@
+import React from "react";
 import { Svg, G, Path, Defs, Rect, ClipPath } from "react-native-svg";
 
 const DotIcon = ({ selected }: { selected: any }) => {
