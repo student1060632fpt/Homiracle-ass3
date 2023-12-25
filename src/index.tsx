@@ -8,6 +8,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import { ApplicationNavigator } from "./Navigation";
 import theme from "./Theme";
 import { PaperProvider } from "react-native-paper";
+import { StatusBar } from "expo-status-bar";
 
 
 // language
@@ -24,6 +25,7 @@ export default function App() {
           <PersistGate loading={null} persistor={persistor}>
             <ApplicationNavigator />
           </PersistGate>
+          <StatusBar style="auto"/>
         </PaperProvider>
       </Provider>
     </NativeBaseProvider>

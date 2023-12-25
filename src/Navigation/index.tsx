@@ -20,7 +20,7 @@ const ApplicationNavigator = () => {
   return (
     <NavigationContainer>
       <StatusBar />
-      <RootStack.Navigator screenOptions={{ headerShown: false , gestureEnabled: false}} initialRouteName={RootScreens.ONBOARDING}>
+      <RootStack.Navigator screenOptions={{ headerShown: false , gestureEnabled: false}} initialRouteName={RootScreens.MAIN}>
         <RootStack.Screen
           name={RootScreens.ONBOARDING}
           component={OnboardingContainer}

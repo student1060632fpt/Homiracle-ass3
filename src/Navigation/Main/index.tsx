@@ -14,6 +14,7 @@ export const MainNavigator = () => {
         options={{
           tabBarIconStyle: { display: "none" },
           tabBarLabelPosition: "beside-icon",
+          headerShown: false
         }}
       />
     </Tab.Navigator>
