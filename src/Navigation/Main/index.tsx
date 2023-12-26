@@ -1,10 +1,11 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { HomeContainer } from "../../Screens/Home";
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useAppTheme } from "./../../Theme";
-import HomeIcon from "./../../static/icon/room.svg"
-import RoomIcon from "./../../static/icon/room2.svg"
+import HomeIconSvg from "./../../static/icon/homeIcon";
+import RoomIconSvg from "./../../static/icon/roomIconSvg";
+import ProfileIconSvg from "./../../static/icon/ProfileIconSvg";
+import HistoryIconSvg from "./../../static/icon/HistoryIconSvg";
 const Tab = createBottomTabNavigator();
 
 // @refresh reset
@@ -13,8 +14,11 @@ export const MainNavigator = () => {
   return (
     <Tab.Navigator
     screenOptions={{
+      headerStatusBarHeight:4,
       tabBarActiveTintColor: theme.colors.primary,
-      tabBarLabelPosition: "below-icon"
+      tabBarLabelPosition: "below-icon",
+      tabBarInactiveTintColor: "#6B7280",
+      tabBarLabelStyle: {fontWeight: "600"}
     }}
     >
       <Tab.Screen
@@ -22,7 +26,7 @@ export const MainNavigator = () => {
         component={HomeContainer}
         options={{
           tabBarLabel: "Trang chủ",
-          tabBarIcon:({color,size}) =>(<HomeIcon width={size} height={size} color={color} />),
+          tabBarIcon:({color,size}) =>(<HomeIconSvg width={size} height={size} color={color} />),
         }}
       />
       <Tab.Screen
@@ -30,7 +34,7 @@ export const MainNavigator = () => {
         component={HomeContainer}
         options={{
           tabBarLabel: "Phòng",
-          tabBarIcon:({color,size}) =>(<MaterialCommunityIcons name="home" color={color} size={size} />),
+          tabBarIcon:({color,size}) =>(<RoomIconSvg width={size} height={size} color={color} />),
 
         }}
       />
@@ -39,7 +43,7 @@ export const MainNavigator = () => {
         component={HomeContainer}
         options={{
           tabBarLabel: "Lịch sử GD",
-          tabBarIcon:({color,size}) =>(<MaterialCommunityIcons name="home" color={color} size={size} />),
+          tabBarIcon:({color,size}) =>(<HistoryIconSvg width={size} height={size} color={color} />),
         }}
       />
       <Tab.Screen
@@ -47,7 +51,7 @@ export const MainNavigator = () => {
         component={HomeContainer}
         options={{
           tabBarLabel: "Hồ sơ",
-          tabBarIcon:({color,size}) =>(<MaterialCommunityIcons name="face-man-profile" color={color} size={size} />),
+          tabBarIcon:({color,size}) =>(<ProfileIconSvg width={size} height={size} color={color} />),
         }}
       />
     </Tab.Navigator>

@@ -23,6 +23,43 @@ Then start by
 ```
 yarn start
 ```
+## SVG Usage
+### For the fast way
+Import your `.svg` file inside a React component:
+
+```jsx
+import Logo from "./logo.svg";
+```
+
+You can then use your image as a component:
+
+```jsx
+<Logo width={120} height={40} />
+```
+### For the right way, could change color
+Use this to change svg to tsx
+https://www.svgviewer.dev/svg-to-react-native-jsx
+
+Then change the component name
+
+Then change the props beside component name from
+```
+const SVGComponent = (props) => (
+```
+ to
+```
+const SVGComponent = (props: React.SVGProps<SVGElement>) => (
+```
+
+then setup the Svg tag: add height, weight and color from props:
+```
+<Svg
+    width={props.width}
+    height={props.height}
+    color={props.color}
+    ...
+>
+```
 
 ## File Structure
 
