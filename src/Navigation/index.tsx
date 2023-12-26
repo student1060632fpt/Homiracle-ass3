@@ -25,10 +25,10 @@ const ApplicationNavigator = () => {
           name={RootScreens.ONBOARDING}
           component={OnboardingContainer}
         />
-        <RootStack.Screen
+        {/* <RootStack.Screen
           name={RootScreens.WELCOME}
           component={WelcomeContainer}
-        />
+        /> */}
         <RootStack.Screen
           name={RootScreens.MAIN}
           component={MainNavigator}
