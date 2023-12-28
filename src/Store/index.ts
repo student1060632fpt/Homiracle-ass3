@@ -1,7 +1,7 @@
-import { API } from "../Services/base";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { configureStore, combineReducers } from "@reduxjs/toolkit";
-import { setupListeners } from "@reduxjs/toolkit/query";
+import { API } from '../Services/base';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { configureStore, combineReducers } from '@reduxjs/toolkit';
+import { setupListeners } from '@reduxjs/toolkit/query';
 import {
   persistReducer,
   persistStore,
@@ -11,8 +11,8 @@ import {
   PERSIST,
   PURGE,
   REGISTER,
-} from "redux-persist";
-import { homeReducers, themeReducers } from "./reducers";
+} from 'redux-persist';
+import { homeReducers, themeReducers } from './reducers';
 
 const reducers = combineReducers({
   api: API.reducer,
@@ -21,16 +21,16 @@ const reducers = combineReducers({
 });
 
 const persistConfig = {
-  key: "root",
+  key: 'root',
   storage: AsyncStorage,
-  whitelist: ["theme"],
+  whitelist: ['theme'],
 };
 
 const persistedReducer = persistReducer(persistConfig, reducers);
 
 const store = configureStore({
   reducer: persistedReducer,
-  middleware: (getDefaultMiddleware) => {
+  middleware: getDefaultMiddleware => {
     const middlewares = getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],

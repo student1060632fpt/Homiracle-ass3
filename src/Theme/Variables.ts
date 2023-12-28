@@ -9,13 +9,13 @@
  * Colors
  */
 export enum Colors {
-  TRANSPARENT = "rgba(0,0,0,0)",
-  INPUT_BACKGROUND = "#FFFFFF",
-  WHITE = "#ffffff",
-  TEXT = "#212529",
-  PRIMARY = "#E14032",
-  SUCCESS = "#28a745",
-  ERROR = "#dc3545",
+  TRANSPARENT = 'rgba(0,0,0,0)',
+  INPUT_BACKGROUND = '#FFFFFF',
+  WHITE = '#ffffff',
+  TEXT = '#212529',
+  PRIMARY = '#E14032',
+  SUCCESS = '#28a745',
+  ERROR = '#dc3545',
 }
 
 export enum NavigationColors {
