@@ -9,8 +9,7 @@ export interface AnalyzeItemProps {
   mid: string;
   footer: string;
   bgColor: string;
-  icon: string;
-  bgIcon: string;
+  icon: ReactNode;
   midRight: ReactNode;
 }
 const AnalyzeItem = (item: AnalyzeItemProps) => {
@@ -51,16 +50,8 @@ const AnalyzeItem = (item: AnalyzeItemProps) => {
           alignItems: "center",
         }}
       >
-        <Icon
-          name={item.icon}
-          style={{
-            backgroundColor: item.bgIcon,
-            padding: 10,
-            borderRadius: 30,
-          }}
-          size={35}
-          color={"#fff"}
-        />
+        {item.icon}
+        
       </View>
     </View>
   );
