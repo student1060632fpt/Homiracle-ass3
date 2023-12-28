@@ -1,14 +1,14 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const slice = createSlice({
-  name: "theme",
+  name: 'theme',
   initialState: { theme: null, darkMode: null },
   reducers: {
     changeTheme: (state, { payload: { theme, darkMode } }) => {
-      if (typeof theme !== "undefined") {
+      if (typeof theme !== 'undefined') {
         state.theme = theme;
       }
-      if (typeof darkMode !== "undefined") {
+      if (typeof darkMode !== 'undefined') {
         state.darkMode = darkMode;
       }
     },

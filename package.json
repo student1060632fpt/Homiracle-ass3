@@ -6,7 +6,8 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\""
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "1.17.11",
@@ -46,6 +47,7 @@
     "@types/react-native": "~0.69.1",
     "@types/react-native-onboarding-swiper": "^1.1.7",
     "babel-plugin-module-resolver": "^4.1.0",
+    "prettier": "^3.1.1",
     "react-native-svg-transformer": "^1.2.0",
     "typescript": "^4.9.4"
   },

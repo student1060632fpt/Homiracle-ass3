@@ -1,4 +1,4 @@
-import { API } from "../base";
+import { API } from '../base';
 
 export interface Geo {
   lat: string;
@@ -31,9 +31,9 @@ export interface User {
 }
 
 const userApi = API.injectEndpoints({
-  endpoints: (build) => ({
+  endpoints: build => ({
     getUser: build.query<User, string>({
-      query: (id) => `users/${id}`,
+      query: id => `users/${id}`,
     }),
   }),
   overrideExisting: true,
