@@ -49,7 +49,6 @@ export const Home = (props: IHomeProps) => {
         >
           <View
             style={{
-              height: 1000,
               paddingHorizontal: 10,
               flexDirection: "column",
               gap: 10,

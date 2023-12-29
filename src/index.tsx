@@ -16,12 +16,11 @@ i18n.locale = Localization.locale;
 i18n.enableFallback = true;
 i18n.defaultLocale = Language.ENGLISH;
 
-
 export default function App() {
   return (
     <NativeBaseProvider>
       <Provider store={store}>
-        <PaperProvider  theme={theme}>
+        <PaperProvider theme={theme}>
           <PersistGate loading={null} persistor={persistor}>
             <ApplicationNavigator />
           </PersistGate>
