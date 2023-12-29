@@ -1,15 +1,14 @@
-import React from "react";
-import * as Localization from "expo-localization";
-import { i18n, Language } from "./Localization";
-import { NativeBaseProvider } from "native-base";
-import { store, persistor } from "./Store";
-import { Provider } from "react-redux";
-import { PersistGate } from "redux-persist/integration/react";
-import { ApplicationNavigator } from "./Navigation";
-import theme from "./Theme";
-import { PaperProvider } from "react-native-paper";
-import { StatusBar } from "expo-status-bar";
-
+import React from 'react';
+import * as Localization from 'expo-localization';
+import { i18n, Language } from './Localization';
+import { NativeBaseProvider } from 'native-base';
+import { store, persistor } from './Store';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { ApplicationNavigator } from './Navigation';
+import theme from './Theme';
+import { PaperProvider } from 'react-native-paper';
+import { StatusBar } from 'expo-status-bar';
 
 // language
 i18n.locale = Localization.locale;
@@ -24,7 +23,7 @@ export default function App() {
           <PersistGate loading={null} persistor={persistor}>
             <ApplicationNavigator />
           </PersistGate>
-          <StatusBar style="auto"/>
+          <StatusBar style='auto' />
         </PaperProvider>
       </Provider>
     </NativeBaseProvider>

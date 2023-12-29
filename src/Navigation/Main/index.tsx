@@ -29,7 +29,7 @@ export const MainNavigator = () => {
           tabBarIcon: ({ color, size }) => (
             <HomeIconSvg width={size} height={size} color={color} />
           ),
-          headerShown: false
+          headerShown: false,
         }}
       />
       <Tab.Screen
