@@ -12,7 +12,7 @@ export const LogIn = () => {
 
   const handleLogin = () => {
     // console.log(`Email: ${email}, Password: ${password}`);
-    navigation.navigate(RootScreens.REGISTER);
+    navigation.navigate(RootScreens.REGISTER as never);
   };
 
   return (

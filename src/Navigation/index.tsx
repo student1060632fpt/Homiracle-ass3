@@ -8,6 +8,7 @@ import { RootScreens } from "../Screens";
 import { OnboardingContainer } from "../Screens/Onboarding";
 import { LogInContainer } from "../Screens/LogIn";
 import { RegisterNavigator } from "./Register"
+import { RegisterContainer } from "./../Screens/Register";
 
 export type RootStackParamList = {
   [RootScreens.MAIN]: undefined;
@@ -24,10 +25,11 @@ const ApplicationNavigator = () => {
   return (
     <NavigationContainer>
       <StatusBar />
-      <RootStack.Navigator screenOptions={{ headerShown: false , gestureEnabled: false}} initialRouteName={RootScreens.ONBOARDING}>
+      <RootStack.Navigator screenOptions={{gestureEnabled: false}} initialRouteName={RootScreens.ONBOARDING}>
         <RootStack.Screen
           name={RootScreens.ONBOARDING}
           component={OnboardingContainer}
+          options={{ headerShown: false }}
         />
         <RootStack.Screen
           name={RootScreens.WELCOME}
@@ -41,12 +43,14 @@ const ApplicationNavigator = () => {
          <RootStack.Screen
           name={RootScreens.LOGIN}
           component={LogInContainer}
-          options={{}}
+          options={{ headerShown: false }}
         />
         <RootStack.Screen
           name={RootScreens.REGISTER}
-          component={RegisterNavigator}
-          options={{}}
+          component={RegisterContainer}
+          options={{
+            headerTitleAlign: "left"
+          }}
         />
       </RootStack.Navigator>
     </NavigationContainer>
