@@ -66,7 +66,7 @@ export const Home = (props: IHomeProps) => {
                 style={{ width: '50%', borderRadius: 15 }}
                 onPress={() => console.log(1)}
               >
-                <Text style={{ fontSize: 16, backgroundColor: 'none' }}>
+                <Text style={{ fontSize: 16, backgroundColor: 'transparent' }}>
                   Sao Mai - 101
                 </Text>
                 <IconEntypo name='triangle-down' color={'#454545'} size={20} />
