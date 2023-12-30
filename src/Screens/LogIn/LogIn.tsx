@@ -1,16 +1,24 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import Login from "../../static/image/login";
 import Logo from "../../static/image/logo";
 import { useNavigation } from '@react-navigation/native';
 import { RootScreens } from "../index";
+import {TextInput} from "react-native-paper"
 
 export const LogIn = () => {
   const navigation = useNavigation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  const [showPassword, setShowPassword] = useState(false);
+  const handleTogglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
   const handleLogin = () => {
+    // console.log(`Email: ${email}, Password: ${password}`);
+    navigation.navigate(RootScreens.MAIN as never);
+  };
+  const handleRegister = () => {
     // console.log(`Email: ${email}, Password: ${password}`);
     navigation.navigate(RootScreens.REGISTER as never);
   };
@@ -28,21 +36,34 @@ export const LogIn = () => {
       </View>
       <TextInput
         style={styles.input}
-        placeholder="Email"
+        label="Email"
         onChangeText={(text) => setEmail(text)}
         value={email}
+        mode='outlined'
       />
       <TextInput
         style={styles.input}
-        placeholder="Password"
-        secureTextEntry
+        label="Password"
         onChangeText={(text) => setPassword(text)}
         value={password}
+        mode='outlined'
+        secureTextEntry={!showPassword}
+        right={
+        <TextInput.Icon
+          icon={showPassword ? "eye-off" : "eye"}
+          onPress={handleTogglePasswordVisibility}
+          style={{
+            paddingTop: 20,
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        />
+      }
       />
       <TouchableOpacity style={styles.button} onPress={handleLogin}>
-        <Text style={{ color: '#006c49' }}>Đăng nhập</Text>
+        <Text style={{ color: '#006c49', fontSize: 14, fontWeight: 'bold' }}>Đăng nhập</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.registerLink}>
+      <TouchableOpacity style={styles.registerLink} onPress={handleRegister}>
         <Text style={{ color: '#434343' }}>Bạn chưa có tài khoản? </Text>
         <Text style={{ color: '#006c49' }}>Đăng ký ngay</Text>
       </TouchableOpacity>
@@ -75,10 +96,10 @@ const styles = StyleSheet.create({
     width: 250,
     padding: 10,
     marginBottom: 5,
-    borderWidth: 1,
     borderColor: '#ddd',
     borderRadius: 4,
     marginTop: 20,
+    height: 20,
   },
   button: {
     backgroundColor: '#fff',
