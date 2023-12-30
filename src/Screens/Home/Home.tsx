@@ -58,7 +58,7 @@ export const Home = (props: IHomeProps) => {
               <Button
                 mode='outlined'
                 style={{ width: '40%', height: 50, borderRadius: 15 }}
-                onPress={() => console.log(1)}
+                onPress={() => {}}
               >
                 <View
                   style={{
@@ -185,7 +185,7 @@ export const Home = (props: IHomeProps) => {
               <Button
                 mode='contained'
                 style={{ flex: 1, backgroundColor: 'white', borderRadius: 34 }}
-                onPress={() => console.log(1)}
+                onPress={() => {}}
               >
                 <View
                   style={{

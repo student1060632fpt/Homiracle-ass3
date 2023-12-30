@@ -6,11 +6,13 @@ import { MainNavigator } from './Main';
 import { WelcomeContainer } from '../Screens/Welcome';
 import { RootScreens } from '../Screens';
 import { OnboardingContainer } from '../Screens/Onboarding';
+import { RoomContainer } from './../Screens/Room';
 
 export type RootStackParamList = {
   [RootScreens.MAIN]: undefined;
   [RootScreens.WELCOME]: undefined;
   [RootScreens.ONBOARDING]: undefined;
+  [RootScreens.ROOM]: undefined;
 };
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
@@ -28,15 +30,17 @@ const ApplicationNavigator = () => {
           name={RootScreens.ONBOARDING}
           component={OnboardingContainer}
         />
-        {/* <RootStack.Screen
+        <RootStack.Screen
           name={RootScreens.WELCOME}
           component={WelcomeContainer}
-        /> */}
+        />
+
         <RootStack.Screen
           name={RootScreens.MAIN}
           component={MainNavigator}
           options={{}}
         />
+        
       </RootStack.Navigator>
     </NavigationContainer>
   );
