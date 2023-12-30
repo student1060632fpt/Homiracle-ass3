@@ -1,49 +1,51 @@
-import FigmaTheme from "./theme.json"
+import FigmaTheme from './theme.json';
 import {
   MD3LightTheme as DefaultTheme,
-  useTheme,customText, configureFonts
+  useTheme,
+  customText,
+  configureFonts,
 } from 'react-native-paper';
-import { Font } from "react-native-paper/lib/typescript/types";
+import { Font } from 'react-native-paper/lib/typescript/types';
 
 // Use this instead of importing `Text` from `react-native-paper`
-export const Text = customText<'customVariant'>()
+export const Text = customText<'customVariant'>();
 
 const fontConfig: Record<string, any> = {
   // Thêm cấu hình cho displayLarge vào đây
-  ["displayLarge"]: {
+  ['displayLarge']: {
     ...FigmaTheme.styles.display.large,
   },
-  ["displayMedium"]: {
+  ['displayMedium']: {
     ...FigmaTheme.styles.display.medium,
   },
-  ["displaySmall"]: {
+  ['displaySmall']: {
     ...FigmaTheme.styles.display.small,
   },
-  ["headlineLarge"]: {
+  ['headlineLarge']: {
     ...FigmaTheme.styles.headline.large,
   },
-  ["headlineMedium"]: {
+  ['headlineMedium']: {
     ...FigmaTheme.styles.headline.medium,
   },
-  ["headlineSmall"]: {
+  ['headlineSmall']: {
     ...FigmaTheme.styles.headline.small,
   },
-  ["bodyLarge"]: {
+  ['bodyLarge']: {
     ...FigmaTheme.styles.body.large,
   },
-  ["bodyMedium"]: {
+  ['bodyMedium']: {
     ...FigmaTheme.styles.body.medium,
   },
-  ["bodySmall"]: {
+  ['bodySmall']: {
     ...FigmaTheme.styles.body.small,
   },
-  ["labelLarge"]: {
+  ['labelLarge']: {
     ...FigmaTheme.styles.label.large,
   },
-  ["labelMedium"]: {
+  ['labelMedium']: {
     ...FigmaTheme.styles.label.medium,
   },
-  ["labelSmall"]: {
+  ['labelSmall']: {
     ...FigmaTheme.styles.label.small,
   },
 };
@@ -54,9 +56,9 @@ const theme = {
   ...FigmaTheme, // Copy it from the color codes scheme from figma and then use it here
   colors: {
     ...DefaultTheme.colors,
-    ...FigmaTheme.schemes.light
+    ...FigmaTheme.schemes.light,
   },
-  fonts: configureFonts({config: fontConfig }),
+  fonts: configureFonts({ config: fontConfig }),
 };
 
 export type AppTheme = typeof theme;

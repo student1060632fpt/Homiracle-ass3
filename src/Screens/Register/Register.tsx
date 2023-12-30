@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from "react-native";
-import { CheckBox } from "react-native-elements";
+import { Checkbox } from "react-native-paper";
 import { useNavigation } from '@react-navigation/native';
 import { RootScreens } from "../index";
 
@@ -48,12 +48,12 @@ export const Register = () => {
       value={confirmPassword}
     />
 
-    <CheckBox
+    {/* <Checkox
       title="Tôi đồng ý với điều khoản và chính sách bảo mật"
       checked={isChecked}
       onPress={() => setChecked(!isChecked)}
       checkedColor="#006c49"
-    />
+    /> */}
 
     <TouchableOpacity style={styles.button} onPress={handleRegister}>
       <Text style={{ color: '#006c49' }}>Tạo Tài Khoản</Text>

@@ -1,16 +1,16 @@
-import React from "react";
-import { i18n, LocalizationKey } from "@/Localization";
-import { View, Text, StyleSheet } from "react-native";
-import { StatusBar } from "expo-status-bar";
-import OnboardingPlugin from "react-native-onboarding-swiper";
-import { RootScreens } from "..";
-import { SafeAreaView } from "react-native-safe-area-context";
-import Onboarding1 from "../../static/image/Onboarding1";
-import Onboarding2 from "../../static/image/Onboarding2";
-import Onboarding3 from "../../static/image/Onboarding3";
-import DotIcon from "../../static/icon/DotIcon";
-import { Dimensions } from "react-native";
-import { Button } from "react-native-paper";
+import React from 'react';
+import { i18n, LocalizationKey } from '@/Localization';
+import { View, Text, StyleSheet } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import OnboardingPlugin from 'react-native-onboarding-swiper';
+import { RootScreens } from '..';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import Onboarding1 from '../../static/image/Onboarding1';
+import Onboarding2 from '../../static/image/Onboarding2';
+import Onboarding3 from '../../static/image/Onboarding3';
+import DotIcon from '../../static/icon/DotIcon';
+import { Dimensions } from 'react-native';
+import { Button } from 'react-native-paper';
 
 export const Onboarding = (props: {
   onNavigate: (string: RootScreens) => void;
@@ -23,47 +23,46 @@ export const Onboarding = (props: {
         flatlistProps={{ scrollEnabled: false } as any}
         pages={[
           {
-            backgroundColor: "#fff",
+            backgroundColor: '#fff',
             image: <Onboarding1 />,
             titleStyles: styles.title,
-            title: "Truy cập mọi nơi",
+            title: 'Truy cập mọi nơi',
             subTitleStyles: styles.subTitle,
             subtitle:
-              "Bạn có thể giám sát và quản lý các thiệt bị trong nhà nhanh chóng dù ở bất cứ đâu",
+              'Bạn có thể giám sát và quản lý các thiệt bị trong nhà nhanh chóng dù ở bất cứ đâu',
           },
           {
-            backgroundColor: "#fff",
+            backgroundColor: '#fff',
             image: <Onboarding2 />,
-            title: "Quản lý căn hộ",
+            title: 'Quản lý căn hộ',
             titleStyles: styles.title,
             subTitleStyles: styles.subTitle,
             subtitle:
-              "Thiết bị luôn luôn theo dõi và cảnh báo ngay khi có người lạ xâm nhập vào nhà",
+              'Thiết bị luôn luôn theo dõi và cảnh báo ngay khi có người lạ xâm nhập vào nhà',
           },
           {
-            backgroundColor: "#fff",
+            backgroundColor: '#fff',
             image: <Onboarding3 />,
-            title: "Thống kê hoá đơn",
+            title: 'Thống kê hoá đơn',
             titleStyles: styles.title,
             subTitleStyles: styles.subTitle,
             subtitle:
-              "Hóa đơn và thông tin chi tiết với số liệu rõ ràng minh bạch sẽ được gửi đến bạn",
+              'Hóa đơn và thông tin chi tiết với số liệu rõ ràng minh bạch sẽ được gửi đến bạn',
           },
         ]}
         NextButtonComponent={(props: any) => (
           <Button
-            mode={"text"}
+            mode={'text'}
             {...props}
             style={styles.buttonRight}
-            textColor="#10B981"
+            textColor='#10B981'
           >
             Tiếp theo
           </Button>
         )}
         SkipButtonComponent={(props: any) => (
           <Button
-            onPress={() => props.onNavigate(RootScreens.MAIN)
-            }
+            onPress={() => props.onNavigate(RootScreens.MAIN)}
             style={styles.buttonLeft}
           >
             Bỏ qua
@@ -71,9 +70,9 @@ export const Onboarding = (props: {
         )}
         DotComponent={DotIcon}
         showPagination={true}
-        bottomBarColor="#fff"
+        bottomBarColor='#fff'
         DoneButtonComponent={() => (
-          <View style={{ width: Dimensions.get("window").width, height: 200 }}>
+          <View style={{ width: Dimensions.get('window').width, height: 200 }}>
             <Button
               mode="contained"
               buttonColor="#10B981"
@@ -94,12 +93,12 @@ export const Onboarding = (props: {
 const styles = StyleSheet.create({
   container: {
     height: 200,
-    justifyContent: "flex-start",
+    justifyContent: 'flex-start',
     paddingTop: 30,
   },
   image: {},
   title: {
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   subTitle: {
     paddingHorizontal: 30,

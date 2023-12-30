@@ -24,6 +24,68 @@ Then start by
 yarn start
 ```
 
+## SVG Usage
+
+### For the fast way
+
+Import your `.svg` file inside a React component:
+
+```jsx
+import Logo from "./logo.svg";
+```
+
+You can then use your image as a component:
+
+```jsx
+<Logo width={120} height={40} />
+```
+
+### For the right way, could change color
+
+Use this to change svg to tsx
+https://www.svgviewer.dev/svg-to-react-native-jsx
+
+Then change the component name
+
+Then change the props beside component name from
+
+```
+const SVGComponent = (props) => (
+```
+
+ to
+
+```
+const SVGComponent = (props: React.SVGProps<SVGElement>) => (
+```
+
+then setup the Svg tag: add height, weight and color from props:
+
+```
+<Svg
+    width={props.width}
+    height={props.height}
+    color={props.color}
+    ...
+>
+```
+
+## Prettier format
+
+To apply style to your code, open your terminal and run this command
+
+```
+yarn format
+
+```
+
+or
+
+```
+npm run format
+
+```
+
 ## File Structure
 
 The template's file structure is organized as follows:
@@ -31,21 +93,13 @@ The template's file structure is organized as follows:
 - `src/`: This folder contains the source code for the template, organized into sub-folders as follows:
 
   - `Components/`: This folder contains reusable components for the app.
-
   - `Config/`: This folder contains configuration files for the app, such as API endpoints, environment settings, and theme configuration.
-
   - `Hooks/`: This folder contains Redux and custom hooks for the app.
-
   - `Localization/`: This folder contains localization files for the app, allowing for easy translation to different languages.
-
   - `Navigation/`: This folder contains navigation files for the app, such as stack navigation, drawer navigation, or tab navigation.
-
   - `Screens/`: This folder contains the main screens of the app.
-
   - `Services/`: This folder contains service files for the app, such as API calls or Firebase integration.
-
   - `Store/`: This folder contains Redux-related files, including the store configuration and reducers.
-
   - `Theme/`: This folder contains files related to the app's visual theme, such as colors, typography, and spacing.
 
 ## Known Issues
@@ -53,11 +107,9 @@ The template's file structure is organized as follows:
 ```js
 ApiV2Error: Not Authorized.
 ```
-Reason and how to remove this issue: https://github.com/expo/expo-cli/issues/2436#issuecomment-1308534521
 
+Reason and how to remove this issue: https://github.com/expo/expo-cli/issues/2436#issuecomment-1308534521
 
 ## Contributing
 
 If you have suggestions for how this template could be improved, or want to report a bug, please open an issue or a pull request. We welcome contributions from the community!
-
-
