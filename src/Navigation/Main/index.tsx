@@ -1,6 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { HomeContainer } from '../../Screens/Home';
+import { TransactionHistoryContainer } from '../../Screens/TransactionHistory';
 import { useAppTheme } from './../../Theme';
 import HomeIconSvg from './../../static/icon/homeIcon';
 import RoomIconSvg from './../../static/icon/roomIconSvg';
@@ -44,12 +45,13 @@ export const MainNavigator = () => {
       />
       <Tab.Screen
         name='History'
-        component={HomeContainer}
+        component={TransactionHistoryContainer}
         options={{
           tabBarLabel: 'Lịch sử GD',
           tabBarIcon: ({ color, size }) => (
             <HistoryIconSvg width={size} height={size} color={color} />
           ),
+          headerShown: false,
         }}
       />
       <Tab.Screen

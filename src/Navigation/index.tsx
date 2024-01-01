@@ -1,14 +1,15 @@
-import React from "react";
-import { StatusBar } from "react-native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { NavigationContainer } from "@react-navigation/native";
-import { MainNavigator } from "./Main";
-import { WelcomeContainer } from "../Screens/Welcome";
-import { RootScreens } from "../Screens";
-import { OnboardingContainer } from "../Screens/Onboarding";
-import { LogInContainer } from "../Screens/LogIn";
+import React from 'react';
+import { StatusBar } from 'react-native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { MainNavigator } from './Main';
+import { WelcomeContainer } from '../Screens/Welcome';
+import { RootScreens } from '../Screens';
+import { OnboardingContainer } from '../Screens/Onboarding';
+import { LogInContainer } from '../Screens/LogIn';
 // import { RegisterNavigator } from "./Register"
-import { RegisterContainer } from "./../Screens/Register";
+import { RegisterContainer } from './../Screens/Register';
+import { TransactionHistoryContainer } from '../Screens/TransactionHistory/';
 
 export type RootStackParamList = {
   [RootScreens.MAIN]: undefined;
@@ -16,6 +17,7 @@ export type RootStackParamList = {
   [RootScreens.ONBOARDING]: undefined;
   [RootScreens.LOGIN]: undefined;
   [RootScreens.REGISTER]: undefined;
+  [RootScreens.TRANSACTION_HISTORY]: undefined;
 };
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
@@ -43,7 +45,7 @@ const ApplicationNavigator = () => {
           component={MainNavigator}
           options={{}}
         />
-         <RootStack.Screen
+        <RootStack.Screen
           name={RootScreens.LOGIN}
           component={LogInContainer}
           options={{ headerShown: false }}
@@ -53,8 +55,13 @@ const ApplicationNavigator = () => {
           component={RegisterContainer}
           options={{
             headerShown: true,
-            headerTitleAlign: "left"
+            headerTitleAlign: 'left',
           }}
+        />
+        <RootStack.Screen
+          name={RootScreens.TRANSACTION_HISTORY}
+          component={TransactionHistoryContainer}
+          options={{ headerShown: false }}
         />
       </RootStack.Navigator>
     </NavigationContainer>
