@@ -6,4 +6,5 @@ export enum RootScreens {
   NOT_FOUND = "*",
   LOGIN = 'LogIn',
   REGISTER = 'Register',
+  Home = 'Home'
 }
