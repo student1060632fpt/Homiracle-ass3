@@ -25,7 +25,7 @@ export const MainNavigator = () => {
       }}
     >
       <Tab.Screen
-        name={RootScreens.MAIN}
+        name={RootScreens.Home}
         component={HomeContainer}
         options={{
           tabBarLabel: 'Trang chủ',
