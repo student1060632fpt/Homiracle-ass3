@@ -63,8 +63,8 @@ export const Home = (props: IHomeProps) => {
             <View style={{ paddingVertical: 10 }}>
               <Button
                 mode='outlined'
-                style={{ width: '50%', borderRadius: 15 }}
-                onPress={() => console.log(1)}
+                style={{ width: '40%', height: 50, borderRadius: 15 }}
+                onPress={() => {}}
               >
                 <Text style={{ fontSize: 16 }}>
                   Sao Mai - 101
@@ -176,7 +176,7 @@ export const Home = (props: IHomeProps) => {
               </TouchableOpacity>
               <TouchableOpacity
                 style={{ flex: 1, backgroundColor: 'white', borderRadius: 34 }}
-                onPress={() => console.log(1)}
+                onPress={() => {}}
               >
                 <View
                   style={{
