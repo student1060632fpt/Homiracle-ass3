@@ -9,6 +9,8 @@ import HistoryIconSvg from './../../static/icon/HistoryIconSvg';
 import { RoomContainer } from './../../Screens/Room';
 import { RootScreens } from './../../Screens';
 import { Text, View, StyleSheet } from 'react-native';
+import { HistoryContainer } from '../../Screens/History';
+import { ProfileConatiner } from '../../Screens/Profile';
 const Tab = createBottomTabNavigator();
 
 // @refresh reset
@@ -48,7 +50,7 @@ export const MainNavigator = () => {
       />
       <Tab.Screen
         name='History'
-        component={HomeContainer}
+        component={HistoryContainer}
         options={{
           tabBarLabel: 'Lịch sử GD',
           tabBarIcon: ({ color, size }) => (
@@ -58,7 +60,7 @@ export const MainNavigator = () => {
       />
       <Tab.Screen
         name='Profile'
-        component={HomeContainer}
+        component={ProfileConatiner}
         options={{
           tabBarLabel: 'Hồ sơ',
           tabBarIcon: ({ color, size }) => (
