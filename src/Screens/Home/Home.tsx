@@ -1,9 +1,15 @@
 import React from 'react';
-import { View, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import {
+  View,
+  StyleSheet,
+  ScrollView,
+  TouchableOpacity,
+  Text,
+} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { User } from '../../Services';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Text, useTheme } from 'react-native-paper';
+import { useTheme } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
 import AnalyzeItem from '../../Components/Home/AnalyzeItem';
 import { Button } from 'react-native-paper';
@@ -60,23 +66,10 @@ export const Home = (props: IHomeProps) => {
                 style={{ width: '40%', height: 50, borderRadius: 15 }}
                 onPress={() => {}}
               >
-                <View
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    justifyContent: 'space-evenly',
-                    alignItems: 'center',
-                    flexDirection: 'row',
-                  }}
-                >
-                  <Text style={{ fontSize: 16 }}>Sao Mai - 101</Text>
-                  <IconEntypo
-                    name='triangle-down'
-                    color={'#454545'}
-                    size={20}
-                    style={{ marginHorizontal: 20 }}
-                  />
-                </View>
+                <Text style={{ fontSize: 16 }}>
+                  Sao Mai - 101
+                </Text>
+                <IconEntypo name='triangle-down' color={'#454545'} size={20} />
               </Button>
             </View>
             <View style={{ flexDirection: 'row', gap: 10 }}>
@@ -148,55 +141,53 @@ export const Home = (props: IHomeProps) => {
                 paddingHorizontal: 20,
               }}
             >
-              <Button
-                mode='contained'
-                style={{ flex: 1, borderRadius: 30 }}
+              <TouchableOpacity
+                style={{ flex: 1, borderRadius: 30, backgroundColor: theme.colors.primary }}
                 onPress={() => console.log(1)}
               >
                 <View
                   style={{
-                    paddingVertical: 5,
+                    paddingVertical: 10,
                     flexDirection: 'row',
                     justifyContent: 'center',
                     alignItems: 'center',
                     gap: 10,
                   }}
                 >
-                  <Text
-                    style={{ color: 'white', fontSize: 18, fontWeight: '700' }}
-                  >
-                    Phòng của tôi
-                  </Text>
-                  <View
-                    style={{
-                      borderRadius: 30,
-                      backgroundColor: 'white',
-                      height: 30,
-                      width: 30,
-                      flexDirection: 'row',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                    }}
-                  >
-                    <Text style={{ fontSize: 16 }}>4</Text>
-                  </View>
+                <Text
+                  style={{ color: 'white', fontSize: 16, fontWeight: '700' }}
+                >
+                  Phòng của tôi
+                </Text>
+                <View
+                  style={{
+                    borderRadius: 30,
+                    backgroundColor: 'white',
+                    height: 30,
+                    width: 30,
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}
+                >
+                  <Text style={{ fontSize: 16 }}>4</Text>
                 </View>
-              </Button>
-              <Button
-                mode='contained'
+                </View>
+              </TouchableOpacity>
+              <TouchableOpacity
                 style={{ flex: 1, backgroundColor: 'white', borderRadius: 34 }}
                 onPress={() => {}}
               >
                 <View
                   style={{
-                    paddingVertical: 5,
+                    paddingVertical: 10,
                     flexDirection: 'row',
                     justifyContent: 'center',
                     alignItems: 'center',
                     gap: 10,
                   }}
                 >
-                  <Text style={{ fontWeight: '700', fontSize: 18 }}>
+                  <Text style={{ fontWeight: '700', fontSize: 16, color: theme.colors.primary }}>
                     Khu vực chung
                   </Text>
                   <View
@@ -213,7 +204,7 @@ export const Home = (props: IHomeProps) => {
                     <Text style={{ fontSize: 16, color: 'white' }}>4</Text>
                   </View>
                 </View>
-              </Button>
+              </TouchableOpacity>
             </View>
             <View style={{ flexDirection: 'row', gap: 20, flexWrap: 'wrap' }}>
               <DeviceItem

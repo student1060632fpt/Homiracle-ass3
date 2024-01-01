@@ -74,10 +74,12 @@ export const Onboarding = (props: {
         DoneButtonComponent={() => (
           <View style={{ width: Dimensions.get('window').width, height: 200 }}>
             <Button
-              mode='contained'
-              buttonColor='#10B981'
-              style={{ width: 120, borderRadius: 10, alignSelf: 'center' }}
-              onPress={() => props.onNavigate(RootScreens.MAIN)}
+              mode="contained"
+              buttonColor="#10B981"
+              style={{ width: 120, borderRadius: 10, alignSelf: "center" }}
+              onPress={() =>
+                props.onNavigate(RootScreens.LOGIN)
+              }
             >
               Bắt đầu
             </Button>
