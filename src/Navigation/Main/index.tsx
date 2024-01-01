@@ -16,7 +16,6 @@ export const MainNavigator = () => {
   const theme = useAppTheme();
   return (
     <Tab.Navigator
-      initialRouteName={RootScreens.ROOM}
       screenOptions={{
         headerStatusBarHeight: 4,
         tabBarActiveTintColor: theme.colors.primary,
