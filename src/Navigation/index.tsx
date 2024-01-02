@@ -12,6 +12,7 @@ import { RegisterContainer } from './../Screens/Register';
 import { TransactionHistoryContainer } from '../Screens/TransactionHistory/';
 import { InvoiceContainer } from '../Screens/Invoice';
 import { RoomInfoContainer } from '../Screens/RoomInfo';
+import { ContractContainer } from '../Screens/Contract';
 
 export type RootStackParamList = {
   [RootScreens.MAIN]: undefined;
@@ -81,7 +82,7 @@ const ApplicationNavigator = () => {
           options={{ headerShown: false }}
         /><RootStack.Screen
         name={RootScreens.CONTRACT}
-        component={InvoiceContainer}
+        component={ContractContainer}
         options={{ headerShown: false }}
       />
       </RootStack.Navigator>

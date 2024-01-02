@@ -69,7 +69,12 @@ const Room = () => {
               <Text style={[styles.haN, styles.haNTypo]}>Hóa đơn</Text>
             </View>
           </Pressable>
-          <Pressable style={styles.cardShadowBox} onPress={() => {}}>
+          <Pressable
+            style={styles.cardShadowBox}
+            onPress={() => {
+              navigtation.navigate('Contract' as never);
+            }}
+          >
             <View style={styles.cardChildShadowBox} />
             <View style={[styles.iconInfoParent]}>
               <Image
