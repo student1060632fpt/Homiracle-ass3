@@ -7,6 +7,11 @@ import HomeIconSvg from './../../static/icon/homeIcon';
 import RoomIconSvg from './../../static/icon/roomIconSvg';
 import ProfileIconSvg from './../../static/icon/ProfileIconSvg';
 import HistoryIconSvg from './../../static/icon/HistoryIconSvg';
+import { RoomContainer } from './../../Screens/Room';
+import { RootScreens } from './../../Screens';
+import { Text, View, StyleSheet } from 'react-native';
+import { HistoryContainer } from '../../Screens/History';
+import { ProfileConatiner } from '../../Screens/Profile';
 const Tab = createBottomTabNavigator();
 
 // @refresh reset
@@ -23,7 +28,7 @@ export const MainNavigator = () => {
       }}
     >
       <Tab.Screen
-        name='Home'
+        name={RootScreens.Home}
         component={HomeContainer}
         options={{
           tabBarLabel: 'Trang chủ',
@@ -34,9 +39,10 @@ export const MainNavigator = () => {
         }}
       />
       <Tab.Screen
-        name='Room'
-        component={HomeContainer}
+        name={RootScreens.ROOM}
+        component={RoomContainer}
         options={{
+          headerShown: false,
           tabBarLabel: 'Phòng',
           tabBarIcon: ({ color, size }) => (
             <RoomIconSvg width={size} height={size} color={color} />
@@ -56,7 +62,7 @@ export const MainNavigator = () => {
       />
       <Tab.Screen
         name='Profile'
-        component={HomeContainer}
+        component={ProfileConatiner}
         options={{
           tabBarLabel: 'Hồ sơ',
           tabBarIcon: ({ color, size }) => (

@@ -61,16 +61,15 @@ export const Home = (props: IHomeProps) => {
             }}
           >
             <View style={{ paddingVertical: 10 }}>
-              <Button
-                mode='outlined'
-                style={{ width: '50%', borderRadius: 15 }}
-                onPress={() => console.log(1)}
+              <TouchableOpacity
+                style={{ width: '40%', height: 50, borderRadius: 15, gap: 5, flexDirection: "row", borderColor: theme.colors.primary, borderWidth: 0.5, justifyContent: "center", alignItems: "center"}}
+                onPress={() => {}}
               >
                 <Text style={{ fontSize: 16, backgroundColor: 'transparent' }}>
                   Sao Mai - 101
                 </Text>
                 <IconEntypo name='triangle-down' color={'#454545'} size={20} />
-              </Button>
+              </TouchableOpacity>
             </View>
             <View style={{ flexDirection: 'row', gap: 10 }}>
               <AnalyzeItem
@@ -176,7 +175,7 @@ export const Home = (props: IHomeProps) => {
               </TouchableOpacity>
               <TouchableOpacity
                 style={{ flex: 1, backgroundColor: 'white', borderRadius: 34 }}
-                onPress={() => console.log(1)}
+                onPress={() => {}}
               >
                 <View
                   style={{

@@ -1,4 +1,5 @@
 export enum RootScreens {
+  ROOM = 'Room',
   MAIN = 'Main',
   WELCOME = 'Welcome',
   ONBOARDING = 'Onboarding',
@@ -6,4 +7,5 @@ export enum RootScreens {
   LOGIN = 'LogIn',
   REGISTER = 'Register',
   TRANSACTION_HISTORY = 'TransactionHistory',
+  Home = 'Home'
 }

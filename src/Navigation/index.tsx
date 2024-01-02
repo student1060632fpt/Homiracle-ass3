@@ -1,3 +1,4 @@
+import { RoomContainer } from './../Screens/Room';
 import React from 'react';
 import { StatusBar } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -15,6 +16,7 @@ export type RootStackParamList = {
   [RootScreens.MAIN]: undefined;
   [RootScreens.WELCOME]: undefined;
   [RootScreens.ONBOARDING]: undefined;
+  [RootScreens.ROOM]: undefined;
   [RootScreens.LOGIN]: undefined;
   [RootScreens.REGISTER]: undefined;
   [RootScreens.TRANSACTION_HISTORY]: undefined;
@@ -36,10 +38,11 @@ const ApplicationNavigator = () => {
           component={OnboardingContainer}
           options={{ headerShown: false }}
         />
-        {/* <RootStack.Screen
+        <RootStack.Screen
           name={RootScreens.WELCOME}
           component={WelcomeContainer}
-        /> */}
+        />
+
         <RootStack.Screen
           name={RootScreens.MAIN}
           component={MainNavigator}
