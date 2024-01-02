@@ -1,15 +1,18 @@
 import { RoomContainer } from './../Screens/Room';
-import React from "react";
-import { StatusBar } from "react-native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { NavigationContainer } from "@react-navigation/native";
-import { MainNavigator } from "./Main";
-import { WelcomeContainer } from "../Screens/Welcome";
-import { RootScreens } from "../Screens";
-import { OnboardingContainer } from "../Screens/Onboarding";
-import { LogInContainer } from "../Screens/LogIn";
-// import { RegisterNavigator } from "./Register"
-import { RegisterContainer } from "./../Screens/Register";
+import React from 'react';
+import { StatusBar } from 'react-native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { MainNavigator } from './Main';
+import { WelcomeContainer } from '../Screens/Welcome';
+import { RootScreens } from '../Screens';
+import { OnboardingContainer } from '../Screens/Onboarding';
+import { LogInContainer } from '../Screens/LogIn';
+import { RegisterContainer } from './../Screens/Register';
+import { TransactionHistoryContainer } from '../Screens/TransactionHistory/';
+import { InvoiceContainer } from '../Screens/Invoice';
+import { RoomInfoContainer } from '../Screens/RoomInfo';
+import { ContractContainer } from '../Screens/Contract';
 
 export type RootStackParamList = {
   [RootScreens.MAIN]: undefined;
@@ -18,6 +21,10 @@ export type RootStackParamList = {
   [RootScreens.ROOM]: undefined;
   [RootScreens.LOGIN]: undefined;
   [RootScreens.REGISTER]: undefined;
+  [RootScreens.TRANSACTION_HISTORY]: undefined;
+  [RootScreens.INVOICE]: undefined;
+  [RootScreens.ROOM_INFO]: undefined;
+  [RootScreens.CONTRACT]: undefined;
 };
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
@@ -46,7 +53,7 @@ const ApplicationNavigator = () => {
           component={MainNavigator}
           options={{}}
         />
-         <RootStack.Screen
+        <RootStack.Screen
           name={RootScreens.LOGIN}
           component={LogInContainer}
           options={{ headerShown: false }}
@@ -56,9 +63,28 @@ const ApplicationNavigator = () => {
           component={RegisterContainer}
           options={{
             headerShown: true,
-            headerTitleAlign: "left"
+            headerTitleAlign: 'left',
           }}
         />
+        <RootStack.Screen
+          name={RootScreens.TRANSACTION_HISTORY}
+          component={TransactionHistoryContainer}
+          options={{ headerShown: false }}
+        />
+        <RootStack.Screen
+          name={RootScreens.INVOICE}
+          component={InvoiceContainer}
+          options={{ headerShown: false }}
+        />
+        <RootStack.Screen
+          name={RootScreens.ROOM_INFO}
+          component={RoomInfoContainer}
+          options={{ headerShown: false }}
+        /><RootStack.Screen
+        name={RootScreens.CONTRACT}
+        component={ContractContainer}
+        options={{ headerShown: false }}
+      />
       </RootStack.Navigator>
     </NavigationContainer>
   );
