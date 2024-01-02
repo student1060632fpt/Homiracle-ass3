@@ -123,6 +123,7 @@ export const TransactionHistory = () => {
             color: theme.colors.primary,
           }}
         />
+        <Appbar.Action icon='bell-outline' onPress={() => {}} />
       </Appbar.Header>
       <ScrollView>
         {historyData.map(item => (

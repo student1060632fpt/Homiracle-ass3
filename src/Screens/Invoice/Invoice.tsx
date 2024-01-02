@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Button } from 'react-native-paper';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { TouchableOpacity } from 'react-native';
 import { useAppTheme } from './../../Theme';
-import { RadioButton } from 'react-native-paper';
+import { RadioButton, Appbar } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
 
 export const Invoice = () => {
   const theme = useAppTheme();
@@ -12,6 +12,7 @@ export const Invoice = () => {
   const [displayDetailButton, setDisplayDetailButton] =
     React.useState('Xem chi tiết');
   const [value, setValue] = React.useState('momo');
+  const navigation = useNavigation();
 
   const handleDisplayDetail = () => {
     setDisplayDetail(displayDetail => !displayDetail);
@@ -26,8 +27,24 @@ export const Invoice = () => {
   };
 
   return (
-    <SafeAreaView>
-      <Text>abababba</Text>
+    <View style={{ flex: 1 }}>
+      <Appbar.Header>
+        <Appbar.BackAction
+          onPress={() => {
+            navigation.navigate('Room' as never);
+          }}
+        />
+        <Appbar.Content
+          title='Hóa đơn'
+          titleStyle={{
+            alignSelf: 'center',
+            fontSize: 20,
+            fontWeight: 'bold',
+            color: theme.colors.primary,
+          }}
+        />
+        <Appbar.Action icon='bell-outline' onPress={() => {}} />
+      </Appbar.Header>
       <View
         style={{
           alignItems: 'center',
@@ -194,6 +211,6 @@ export const Invoice = () => {
           </Button>
         </View>
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
