@@ -56,5 +56,11 @@
     "typescript": "^4.9.4",
     "prettier": "^3.1.1"
   },
+  "ios": {
+    "supportsTablet": true
+  },
+  "android": {
+    "package": "com.homiracle"
+  },
   "private": true
 }
