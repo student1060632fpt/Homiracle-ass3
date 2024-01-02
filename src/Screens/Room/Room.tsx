@@ -1,60 +1,80 @@
 import * as React from 'react';
 import { Text, StyleSheet, Image, View, Pressable } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-
+import { useNavigation } from '@react-navigation/native';
 import IconEntypo from 'react-native-vector-icons/Entypo';
-import { Button } from 'react-native-paper';
+import { Appbar, Button } from 'react-native-paper';
 import theme, { useAppTheme } from './../../Theme';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { InvoiceContainer } from '../Invoice';
 
 const Room = () => {
   const theme = useAppTheme();
+  const navigtation = useNavigation();
 
   return (
-    <View style={styles.content}>
-      
-      <View style={styles.buildingBlocksmenuButton}>
-        <View style={[styles.stateLayer, styles.infoParentFlexBox]}>
-          <Text style={styles.labelText}>Sao Mai - 101</Text>
-          <IconEntypo
-            name='triangle-down'
-            color={theme.colors.onSurfaceVariant}
-            size={20}
-            style={{ marginHorizontal: 5 }}
-          />
+    <View>
+      <Appbar.Header style={{ backgroundColor: theme.colors.surface }}>
+        <Appbar.Content
+          title='Phòng trọ của bạn'
+          titleStyle={{
+            alignSelf: 'center',
+            fontSize: 20,
+            fontWeight: 'bold',
+            color: theme.colors.primary,
+          }}
+        />
+        <Appbar.Action icon='bell-outline' onPress={() => {}} />
+      </Appbar.Header>
+      <View style={styles.content}>
+        <View style={styles.buildingBlocksmenuButton}>
+          <View style={[styles.stateLayer, styles.infoParentFlexBox]}>
+            <Text style={styles.labelText}>Sao Mai - 101</Text>
+            <IconEntypo
+              name='triangle-down'
+              color={theme.colors.onSurfaceVariant}
+              size={20}
+              style={{ marginHorizontal: 5 }}
+            />
+          </View>
         </View>
-      </View>
-      <View style={[styles.cardInfoOptionParent, styles.infoParentFlexBox]}>
-        <Pressable style={styles.cardInfoOption} onPress={() => {}}>
-          <View style={styles.cardChildShadowBox} />
-          <View style={[styles.iconInfoParent]}>
-            <Image
-              style={styles.tinyImage}
-              source={require('./../../static/icon/info.png')}
-            />
-            <Text style={styles.thngTin}>Thông tin</Text>
-          </View>
-        </Pressable>
-        <Pressable style={styles.cardShadowBox} onPress={() => {}}>
-          <View style={styles.cardChildShadowBox} />
-          <View style={[styles.iconInfoParent]}>
-            <Image
-              style={styles.tinyImage}
-              source={require('./../../static/icon/bill.png')}
-            />
-            <Text style={[styles.haN, styles.haNTypo]}>Hóa đơn</Text>
-          </View>
-        </Pressable>
-        <Pressable style={styles.cardShadowBox} onPress={() => {}}>
-          <View style={styles.cardChildShadowBox} />
-          <View style={[styles.iconInfoParent]}>
-            <Image
-              style={styles.tinyImage}
-              source={require('./../../static/icon/contract.png')}
-            />
-            <Text style={[styles.hpNg, styles.haNTypo]}>Hợp đồng</Text>
-          </View>
-        </Pressable>
+        <View style={[styles.cardInfoOptionParent, styles.infoParentFlexBox]}>
+          <Pressable style={styles.cardInfoOption} onPress={() => {}}>
+            <View style={styles.cardChildShadowBox} />
+            <View style={[styles.iconInfoParent]}>
+              <Image
+                style={styles.tinyImage}
+                source={require('./../../static/icon/info.png')}
+              />
+              <Text style={styles.thngTin}>Thông tin</Text>
+            </View>
+          </Pressable>
+          <Pressable
+            style={styles.cardShadowBox}
+            onPress={() => {
+              navigtation.navigate('Invoice' as never);
+            }}
+          >
+            <View style={styles.cardChildShadowBox} />
+            <View style={[styles.iconInfoParent]}>
+              <Image
+                style={styles.tinyImage}
+                source={require('./../../static/icon/bill.png')}
+              />
+              <Text style={[styles.haN, styles.haNTypo]}>Hóa đơn</Text>
+            </View>
+          </Pressable>
+          <Pressable style={styles.cardShadowBox} onPress={() => {}}>
+            <View style={styles.cardChildShadowBox} />
+            <View style={[styles.iconInfoParent]}>
+              <Image
+                style={styles.tinyImage}
+                source={require('./../../static/icon/contract.png')}
+              />
+              <Text style={[styles.hpNg, styles.haNTypo]}>Hợp đồng</Text>
+            </View>
+          </Pressable>
+        </View>
       </View>
     </View>
   );
@@ -70,7 +90,6 @@ const Border = {
 };
 
 const styles = StyleSheet.create({
- 
   tinyImage: {
     width: 40,
     height: 40,

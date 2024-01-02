@@ -13,7 +13,7 @@ type RoomScreenNavigatorProps = NativeStackScreenProps<
 export const RoomContainer = () => {
   return (
     <>
-      <NotiHeader title="Phòng trọ của bạn" />
+      {/* <NotiHeader title="Phòng trọ của bạn" /> */}
       <Room />
     </>
   );

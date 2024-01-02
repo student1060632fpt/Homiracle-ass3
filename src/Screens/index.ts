@@ -7,5 +7,6 @@ export enum RootScreens {
   LOGIN = 'LogIn',
   REGISTER = 'Register',
   TRANSACTION_HISTORY = 'TransactionHistory',
+  INVOICE = 'Invoice',
   Home = 'Home'
 }

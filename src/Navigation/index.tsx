@@ -11,6 +11,7 @@ import { LogInContainer } from '../Screens/LogIn';
 // import { RegisterNavigator } from "./Register"
 import { RegisterContainer } from './../Screens/Register';
 import { TransactionHistoryContainer } from '../Screens/TransactionHistory/';
+import { InvoiceContainer } from '../Screens/Invoice';
 
 export type RootStackParamList = {
   [RootScreens.MAIN]: undefined;
@@ -20,6 +21,7 @@ export type RootStackParamList = {
   [RootScreens.LOGIN]: undefined;
   [RootScreens.REGISTER]: undefined;
   [RootScreens.TRANSACTION_HISTORY]: undefined;
+  [RootScreens.INVOICE]: undefined;
 };
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
@@ -64,6 +66,11 @@ const ApplicationNavigator = () => {
         <RootStack.Screen
           name={RootScreens.TRANSACTION_HISTORY}
           component={TransactionHistoryContainer}
+          options={{ headerShown: false }}
+        />
+        <RootStack.Screen
+          name={RootScreens.INVOICE}
+          component={InvoiceContainer}
           options={{ headerShown: false }}
         />
       </RootStack.Navigator>
