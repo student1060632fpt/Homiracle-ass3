@@ -8,10 +8,10 @@ import { WelcomeContainer } from '../Screens/Welcome';
 import { RootScreens } from '../Screens';
 import { OnboardingContainer } from '../Screens/Onboarding';
 import { LogInContainer } from '../Screens/LogIn';
-// import { RegisterNavigator } from "./Register"
 import { RegisterContainer } from './../Screens/Register';
 import { TransactionHistoryContainer } from '../Screens/TransactionHistory/';
 import { InvoiceContainer } from '../Screens/Invoice';
+import { RoomInfoContainer } from '../Screens/RoomInfo';
 
 export type RootStackParamList = {
   [RootScreens.MAIN]: undefined;
@@ -22,6 +22,8 @@ export type RootStackParamList = {
   [RootScreens.REGISTER]: undefined;
   [RootScreens.TRANSACTION_HISTORY]: undefined;
   [RootScreens.INVOICE]: undefined;
+  [RootScreens.ROOM_INFO]: undefined;
+  [RootScreens.CONTRACT]: undefined;
 };
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
@@ -73,6 +75,15 @@ const ApplicationNavigator = () => {
           component={InvoiceContainer}
           options={{ headerShown: false }}
         />
+        <RootStack.Screen
+          name={RootScreens.ROOM_INFO}
+          component={RoomInfoContainer}
+          options={{ headerShown: false }}
+        /><RootStack.Screen
+        name={RootScreens.CONTRACT}
+        component={InvoiceContainer}
+        options={{ headerShown: false }}
+      />
       </RootStack.Navigator>
     </NavigationContainer>
   );

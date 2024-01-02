@@ -39,7 +39,12 @@ const Room = () => {
           </View>
         </View>
         <View style={[styles.cardInfoOptionParent, styles.infoParentFlexBox]}>
-          <Pressable style={styles.cardInfoOption} onPress={() => {}}>
+          <Pressable
+            style={styles.cardInfoOption}
+            onPress={() => {
+              navigtation.navigate('RoomInfo' as never);
+            }}
+          >
             <View style={styles.cardChildShadowBox} />
             <View style={[styles.iconInfoParent]}>
               <Image
