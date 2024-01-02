@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { TouchableOpacity } from 'react-native';
 import { useAppTheme } from '../../Theme';
 import { Appbar } from 'react-native-paper';
 import { ScrollView } from 'native-base';
