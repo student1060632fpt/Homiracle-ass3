@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   View,
   StyleSheet,
@@ -22,6 +22,7 @@ import IconFeather from 'react-native-vector-icons/Feather';
 import IconIonicons from 'react-native-vector-icons/Ionicons';
 import AirConIcon from '../../static/icon/AirConIcon';
 import AirPurifier from '../../static/icon/AirPurifier';
+import ButtonComponent from '../../Components/Home/ButtonCustom';
 export interface IHomeProps {
   data: User | undefined;
   isLoading: boolean;
@@ -30,6 +31,9 @@ export interface IHomeProps {
 export const Home = (props: IHomeProps) => {
   const { data, isLoading } = props;
   const theme = useTheme();
+  const [isActive, setIsActive] = useState(false);
+  const setTrue = () => setIsActive(true);
+  const setFalse = () => setIsActive(false);
 
   return (
     <LinearGradient
@@ -62,7 +66,17 @@ export const Home = (props: IHomeProps) => {
           >
             <View style={{ paddingVertical: 10 }}>
               <TouchableOpacity
-                style={{ width: '40%', height: 50, borderRadius: 15, gap: 5, flexDirection: "row", borderColor: theme.colors.primary, borderWidth: 0.5, justifyContent: "center", alignItems: "center"}}
+                style={{
+                  width: '40%',
+                  height: 50,
+                  borderRadius: 15,
+                  gap: 5,
+                  flexDirection: 'row',
+                  borderColor: theme.colors.primary,
+                  borderWidth: 0.5,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
                 onPress={() => {}}
               >
                 <Text style={{ fontSize: 16, backgroundColor: 'transparent' }}>
@@ -140,70 +154,18 @@ export const Home = (props: IHomeProps) => {
                 paddingHorizontal: 20,
               }}
             >
-              <TouchableOpacity
-                style={{ flex: 1, borderRadius: 30, backgroundColor: theme.colors.primary }}
-                onPress={() => console.log(1)}
-              >
-                <View
-                  style={{
-                    paddingVertical: 10,
-                    flexDirection: 'row',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    gap: 10,
-                  }}
-                >
-                <Text
-                  style={{ color: 'white', fontSize: 16, fontWeight: '700' }}
-                >
-                  Phòng của tôi
-                </Text>
-                <View
-                  style={{
-                    borderRadius: 30,
-                    backgroundColor: 'white',
-                    height: 30,
-                    width: 30,
-                    flexDirection: 'row',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                  }}
-                >
-                  <Text style={{ fontSize: 16 }}>4</Text>
-                </View>
-                </View>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={{ flex: 1, backgroundColor: 'white', borderRadius: 34 }}
-                onPress={() => {}}
-              >
-                <View
-                  style={{
-                    paddingVertical: 10,
-                    flexDirection: 'row',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    gap: 10,
-                  }}
-                >
-                  <Text style={{ fontWeight: '700', fontSize: 16, color: theme.colors.primary }}>
-                    Khu vực chung
-                  </Text>
-                  <View
-                    style={{
-                      borderRadius: 30,
-                      backgroundColor: '#30896b',
-                      height: 30,
-                      width: 30,
-                      flexDirection: 'row',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                    }}
-                  >
-                    <Text style={{ fontSize: 16, color: 'white' }}>4</Text>
-                  </View>
-                </View>
-              </TouchableOpacity>
+              <ButtonComponent
+                text='Phòng của tôi'
+                count={4}
+                isEnable={!isActive}
+                setEnable={setFalse}
+              />
+              <ButtonComponent
+                text='Khu vực chung'
+                count={4}
+                isEnable={isActive}
+                setEnable={setTrue}
+              />
             </View>
             <View style={{ flexDirection: 'row', gap: 20, flexWrap: 'wrap' }}>
               <DeviceItem
